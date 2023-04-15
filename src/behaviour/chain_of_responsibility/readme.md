@@ -6,7 +6,6 @@ O padrão de design da Chain of Responsibility permite que um objeto envie um co
 
 Usage:
 ```kotlin
-fun main() {
     fun main() {
         val authHandler = ClientCertificateAuthenticationHandler(
                 next = BasicAuthenticationHandler(
@@ -20,7 +19,6 @@ fun main() {
         authHandler.handleRequest(AuthenticationType.BASIC)
         authHandler.handleRequest(AuthenticationType.CLIENT_CERTIFICATE)
     }
-}
 ```
 
 
