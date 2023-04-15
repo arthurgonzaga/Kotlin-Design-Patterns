@@ -1,8 +1,8 @@
 # State Design Pattern
 
-![](uml.png)
-
 O Design Pattern do State sugere que você crie classes para todos os estados possíveis de um objeto e extraia todos os comportamentos específicos do estado para essas classes. Em vez de implementar todos os comportamentos por conta própria, o objeto original, chamado Context, armazena uma referência a um dos objetos de estado que representa seu estado atual e delega todo o trabalho relacionado ao estado a esse objeto.
+
+![](uml.png)
 
 Usage:
 ```kotlin
