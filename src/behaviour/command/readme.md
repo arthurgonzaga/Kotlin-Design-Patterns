@@ -6,14 +6,13 @@ O command desacopla o objeto que chama a operação daquele que sabe como execut
 Usage:
 ```kotlin
 fun main() {
-    fun main() {
-        val jacket = Jacket()
+    val jacket = Jacket()
 
-        with(OrderHandler()) {
-            invoke(PlaceOrderCommand(jacket))
-            invoke(ReturnOrderCommand(jacket))
-        }
-    }
+    val placeOrderHandler = OrderHandler()
+    val returnOrderHandler = OrderHandler()
+
+    placeOrderHandler.execute(PlaceOrderCommand(jacket))
+    returnOrderHandler.execute(ReturnOrderCommand(jacket))
 }
 ```
 

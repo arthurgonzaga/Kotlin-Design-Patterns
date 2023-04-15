@@ -7,9 +7,9 @@ import behaviour.command.commands.ReturnOrderCommand
 fun main() {
     val jacket = Jacket()
 
-    with(OrderHandler()) {
-        invoke(PlaceOrderCommand(jacket))
-        invoke(ReturnOrderCommand(jacket))
-    }
+    val placeOrderHandler = OrderHandler()
+    val returnOrderHandler = OrderHandler()
 
+    placeOrderHandler.execute(PlaceOrderCommand(jacket))
+    returnOrderHandler.execute(ReturnOrderCommand(jacket))
 }
