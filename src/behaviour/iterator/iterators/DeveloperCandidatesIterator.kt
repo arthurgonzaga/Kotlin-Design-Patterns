@@ -1,7 +1,7 @@
 package behaviour.iterator.iterators
 
 import behaviour.iterator.Candidate
-import behaviour.iterator.JobOffer
+import behaviour.iterator.offers.JobOffer
 
 class DeveloperCandidatesIterator(
     private val jobOffer: JobOffer

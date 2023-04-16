@@ -2,11 +2,13 @@ package behaviour.iterator
 
 import behaviour.iterator.iterators.CookerCandidatesIterator
 import behaviour.iterator.iterators.DeveloperCandidatesIterator
+import behaviour.iterator.offers.CookerJobOffer
+import behaviour.iterator.offers.DeveloperJobOffer
+import behaviour.iterator.offers.JobOffer
 
 fun main() {
-    val cookerJobOffer = JobOffer(zak, alice, sara, anna)
-
-    val cookersIterator = CookerCandidatesIterator(cookerJobOffer)
+    val cookerJobOffer = CookerJobOffer(zak, alice, sara, anna)
+    val cookersIterator = cookerJobOffer.iterator()
 
     println("Cookers with preconditions to the job offer:")
     while (cookersIterator.hasNext()) {
@@ -15,8 +17,8 @@ fun main() {
 
     print("\n")
 
-    val developerJobOffer = JobOffer(zak, alice, sara, anna)
-    val developersIterator = DeveloperCandidatesIterator(developerJobOffer)
+    val developerJobOffer = DeveloperJobOffer(zak, alice, sara, anna)
+    val developersIterator = developerJobOffer.iterator()
 
     println("Developers with preconditions to the job offer:")
     while (developersIterator.hasNext()) {

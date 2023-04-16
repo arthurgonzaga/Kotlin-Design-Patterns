@@ -1,9 +1,9 @@
-package behaviour.iterator
+package behaviour.iterator.offers
 
 import behaviour.iterator.Candidate
 
-class JobOffer(
+abstract class JobOffer(
     vararg candidates: Candidate
-) {
+): Iterable<Candidate?> {
     val candidates = candidates
 }
